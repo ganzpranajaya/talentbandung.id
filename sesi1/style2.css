@@ -1,0 +1,21 @@
+.content {
+    width: auto;
+    float: left;
+    position: relative;
+    padding: 15px 2px 15px 15px;
+    margin-left: 15%;
+    text-align: center;
+    }
+ .content {
+    width: auto;
+    position: absolute;
+    top: 320px;
+    right: 35px;
+    }
+ .content h2 {
+    color: rgb(2, 5, 182);
+    }
+ .content p {
+    font-size: 12px;
+    }
+}
