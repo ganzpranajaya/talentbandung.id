@@ -3,66 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Taman Tematik Bandung</title>
-    <link href="https://fonts.googleapis.com/css?family=Caveat|Playfair+Display|Roboto" rel="stylesheet"> 
+    <title>Jelajah Taman Tematik Bandung</title>
+    <link href="https://fonts.googleapis.com/css?family=Caveat|Playfair+Display|Roboto:300,400,400i" rel="stylesheet"> 
     <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style2.css">
 </head>
 <body>
-    <div class=site-content"">
-        <div class="hero">
-        <h1>
-            <span class="subtitle">Taman</span>
-            <span class="title">Balai Kota</span>
-        </h1>    
+    <div class="site-content">
+        <header class="hero">
+            <h1>
+                <span class="subtitle">Taman</span>
+                <span class="title">Balai Kota</span>
+            </h1>
             <p>Taman ini sudah sejak lama berdiri, dan sering digunakan untuk berolahraga seperti bersepeda. Namun dengan sedikit renovasi dan ditambahnya fasilitas, taman ini semakin ramai dikunjungi, entah untuk bersantai, berolahraga maupun bermain. Prisma gembok cinta, salah satu fasilitas yang disediakan untuk menggembok cinta dengan sebuah gembok, cocok bagi pasangan yang sedang jatuh cinta. Jika belum punya pasangan jangan berkecil hati, Anda juga bisa datang ke taman ini untuk sekedar menjelajah dunia maya dengan fasilitas Wi-fi gratis yang disediakan ataupun berfoto.</p>
-        </div>
+        </header>
 
-        <form action="">
-            <button type="left"><i class= "ion-arrow-left-c"></i></button>
-        </form>
+        <main>
+            <div class="slider-image">
+				<form action="">
+					<button id="left"><i class="ion-ios-arrow-thin-left"></i></button>
+				</form>
+					<div class="image-carousel grid-layout">
+						<div class="grid-carousel">
+							<figure>
+								<img src="images/slide1.jpg" alt="taman-balkot">
+							</figure>
+						</div>
+						<div class="grid-carousel">
+							<figure>
+								<img src="images/slide2.jpg" alt="taman-balkot2">
+							</figure>
+						</div>
+						<div class="grid-carousel">
+							<figure>
+								<img src="images/slide3.jpg" alt="taman-balkot3">
+							</figure>
+						</div>
+					</div>
+				<form action="">
+					<button id="right"><i class="ion-ios-arrow-thin-right"></i></button>
+				</form>
+			</div>
+            <div class="map">
+                <figure>
+                    <img src="images/map.jpg" alt="peta-bandung">
+                </figure>
+            </div>
+            <div class="nav grid-layout">
+                <div class="grid-nav">
+                    <form action="">
+                        <button id="index">
+                            <a href="index.html"><i class="ion-ios-home-outline">Kembali ke Halaman Utama</i></a>
+                        </button>
+                    </form>
+                </div>
+                <div class="grid-nav">
+                    <form action="">
+                        <button id="nav-map">
+                            <a href="https://goo.gl/maps/nw4N6pkuWoA2"><i class="ion-compass">Dapatkan Petunjuk Arah</i></a>
+                        </button>
+                    </form>
+                </div>  
+            </div>
+        </main>
+        
+        <footer class="footer">
+            <p>&copy; copyright 2017 by talentbandung.id</p>
+        </footer>
     </div>
-
-    <div class="slider-taman">
-        <div class="taman">
-            <a href="single.html">
-                <img src="images/slide1.jpg" alt="">
-            </a>
-        </div>
-
-        <div class="taman">
-            <a href="single.html">
-                <img src="images/slide2.jpg" alt="">
-            </a>
-        </div>
-        
-        <div class="taman">
-        <a href="single.html">
-            <img src="images/slide3.jpg" alt="">
-        </a>
-
-        <form action="">
-            <button type="right"><i class= "ion-arrow-right-c"></i></button>
-        </form>
-        
-    </div>
-
-        <div class="Tombol">
-        <form action="">
-            <button type="submit"><i class= "ion-ios-home-outline"></i></button>
-            <p>Kembali ke Halaman Utama</p>
-        </form>
-        </div>
-        
-        <div class="Tombol">
-            <form action="">
-                <button type="submit"><i class= "ion-compass"></i></button>
-                <p>Dapatkan Petunjuk Arah</p>
-            </form>
-        </div>
-
-    <div class="footer">
-        <p>&copy; copyright 2017 by talentbandung.id</p>
-        </div>
 </body>
 </html>
