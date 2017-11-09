@@ -3,7 +3,7 @@
 }
 
 body{
-    background-color : #f8f9fa;
+    background-color : #ffffff;
     background-image : url(images/background.png);
     background-repeat: no-repeat;
     background-size  : 100%;
@@ -165,14 +165,18 @@ body{
     margin: auto;
 }
 
-.map img{
+.map{
     max-width: 100%;
     height: auto;
     margin: 0 auto;
     position: relative;
-
 }
-
+.map img{
+    max-width: 100%;
+}
+.map figure{
+    margin: 0;
+}
 .map:before,
 .map:after{
     content: " ";
@@ -186,9 +190,15 @@ body{
     top: 0;
     background-image: linear-gradient(white, rgba(255,255,255,0) );
 }
+.map:after{
+    background-image: linear-gradient(rgba(255,255,255,0), white );
+    bottom: 0;
+}
+
 .grid-nav {
     width: 50%;
-    float: left
+    float: left;
+    margin-top:-20px;
 }
 
 .nav form {
@@ -206,15 +216,15 @@ body{
 
 .nav form button a {
     text-decoration: none;
-    color: white
+    color: white;
 }
 
 #index {
-    background-color: #22b8cf
+    background-color: #22b8cf;
 }
 
 #nav-map{
-    background-color: #329af0
+    background-color: #329af0;
 }
 
 .footer {
