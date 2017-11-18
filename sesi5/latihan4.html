@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="filter" onkeyup="filter">
+    <ul id="list-taman"></ul>
+
+    <script src="jquery-3.2.1.js"></script>
+    <script>
+        var listTaman = $('#list-taman')
+        /* var dataTaman; */
+        $.get('https://www.ariona.net/talentbandung/', function(data, status) {
+           /*  dataTaman=data; */
+           console.log(data);
+            for( var i = 0; i < data.length; i++){
+            var taman= '<li class="taman"><img src="'+data[i].image.thumbnail+'"/> '+ data[i].nama +'</li>';
+            listTaman.append(taman);
+            }
+        });
+
+        var filter = $('#filter');
+        filter.keyup(filterBuah);
+    
+        function filterTaman(){
+        var search = filter.val();
+        var buahItem = $('.buah');
+
+        buahItem.each(function(){
+            var buah = $(this)
+            namaBuah = buah.text();
+
+            if (namaBuah.indexOf (search) != -1){
+                $(this).slideDown();
+            } else {
+                $(this).slideUp();
+            }
+        });
+    }
+
+
+
+    </script>
+</body>
+</html>

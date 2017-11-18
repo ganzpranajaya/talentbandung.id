@@ -1,0 +1,151 @@
+*{
+    box-sizing         : border-box;
+}
+
+body{
+    background-color   : #f8f9fa;
+    background-image   : url(images/background.png);
+    background-repeat  : no-repeat;
+    background-size    : 100%;
+    font-family        : roboto, san-serif;
+}
+
+.site-content{
+   max-width           : 1125px;
+   margin              : 0 auto;
+   /*background-color  : red; */
+}
+
+.hero{
+    padding            : 12px 15px;
+    text-align         : center;
+}
+
+.title{
+    font-family        : 'Playfair Display';
+}
+
+.subtitle{
+    font-family        : 'caveat';
+    font-weight        : normal;
+}
+
+.title, .subtitle{
+    display            : block;
+}
+
+.hero .title{
+    font-size          : 72px;
+}
+
+.hero .subtitle{
+    font-size          : 64px;
+}
+
+.hero p{
+    font-size          : 22px;
+    font-weight        : lighter;
+}
+
+.hero form{
+    max-width          : 550px;
+    margin             : 70px auto 0;
+    position           : relative;
+}
+
+.hero form input{
+    width              : 100%;
+    font-size          : 16px;
+    padding            : 20px 70px 25px 25px;
+    border-radius      : 45px;
+    border             : 2px solid white;
+    box-shadow         : 0 10px 13px rgba(0,0,0,0.05);
+    outline            : none;
+    transition         : border-color 300ms ease-in;
+}
+
+.hero form input:focus{
+border                 : 2px solid rgb(255, 0, 242);
+}
+
+.hero form button{
+    position           : absolute;
+    top                : 10px;
+    right              : 20px;
+    font-size          : 36px;
+    color              : #e3a6a9;
+    border             : none;
+    background         : none;
+}
+
+.grid-layout:after{
+content                : " ";
+clear                  : both;
+display                : block;
+}
+
+.grid-item{
+    width              : 33.3333%;
+    float              : left;
+    padding            : 0 15px;
+}
+
+.grid-item:nth-child(3n+1){
+    clear              : both;
+}
+
+.taman{
+background-color       : rgb(245, 236, 236);
+margin-bottom          : 30px;
+box-shadow             : 0 9px 18px rgba(0,0,0,0.05);
+}
+
+.taman figure{margin   : 0}
+
+.taman figure img{width: 100%}
+
+.taman-detail{
+padding                : 15px;
+text-align             : center;
+}
+
+.taman a{
+text-decoration        : none;
+}
+
+.taman-detail h2{
+    font-size          : 28px;
+    margin             : 5px 0 15px;
+}
+
+.taman-detail .title{
+color                  : #f80606;
+}
+
+.taman-detail .subtitle{
+color                  : #888;
+}
+
+.taman-detail p{
+font-size              : 14px;
+color                  : #929292;
+}
+
+.footer{
+    padding            : 90px 15px 40px;
+    text-align         : center;
+    font-weight        : bolder;
+    color              : blue;
+    font-size          : 20px;
+    text-shadow: 0 2px 2px rgba(197, 155, 155, 0.6);
+}
+
+@media screen and (max-width:990px){
+    .grid-item{width: 50%}
+    .grid-item:nth-child(3n+1){ clear: none}
+    .grid-item:nth-child(2n+1){clear: both}
+}
+
+@media screen and (max-width:480px){
+    .grid-item{width: 100%}
+}
