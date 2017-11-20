@@ -55,6 +55,19 @@
 
    <script src="assets/js/jquery-3.2.1.js"></script>
    <script src="assets/js/slick.min.js"></script>
+   <script>
+   function initMap() {
+    var balkot = {lat:-6.9130821, lng:107.6071265}; 
+    var map = new google.maps.Map(document.getElementById('map'), {
+        center: balkot,
+        zoom: 15,
+    });
+    var marker = new google.maps.Marker({
+        position: balkot,
+        map: map
+    });
+      }
+   </script>
    <script src="https://maps.googleapis.com/maps/api/js?key= AIzaSyBLWX63XHRkf8lztIh-fauzLMs38o2W0tc&callback=initMap"
    async defer></script>
    <script src="assets/js/index.js"></script>

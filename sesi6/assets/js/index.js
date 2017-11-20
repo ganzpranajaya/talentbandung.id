@@ -30,11 +30,3 @@ var gallery = $('.gallery-carousel').slick({
     prevArrow: '<button type="button" class="slick-prev"><i class="ion-android-arrow-dropleft-circle"></i></button>',
     nextArrow: '<button type="button" class="slick-next"><i class="ion-android-arrow-dropright-circle"></i></button>',
 });
-
-function initMap() {
-    var uluru = {}
-    map = new google.maps.Map(document.getElementById('map'), {
-        center: {lat: -34.397, lng: 150.644},
-        zoom: 8
-    });
-}
