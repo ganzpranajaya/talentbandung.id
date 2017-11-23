@@ -51,7 +51,7 @@ table {
 
 body{
     font: 16px/28px arial, sans-serif;
-    background-image: url(assets/img/bg.png);
+    background-image: url(../img/bg2.png);
     background-color: rgba(189, 184, 189, 0.667);
     color: #333;
 }
@@ -62,66 +62,130 @@ body{
     background-color: #fff;
 }
 
-.header{
-    padding: 20px;
-    padding-bottom: 10px;
-}
-
 .header .judul{
     font-size: 40px;
     font-weight: bold;
+    margin-bottom: 20px;
 }
 
-.header ul li {
+.header{
+    padding: 20px 0 0 0;
+    
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a, .dropbtn {
     display: inline-block;
-    margin-top: 40px;
-    margin-right: 10px;
-}
-
-.header a{
+    color: skyblue;
+    text-align: center;
+    padding: 14px 16px;
     text-decoration: none;
-    color: salmon;
-    padding: 3px;
 }
 
-.header a:hover{
-    background-color: skyblue;
-    color: white;
-    border-radius: 45px;
+li a:hover, .dropdown:hover .dropbtn {
+    background-color: red;
+}
+
+li.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+    display: block;
 }
 
 .hero{
     height: 350px;
-    background-image: url(assets/img/hero4.jpg);
+    background-image: url(../img/hero1.jpg);
     background-size: cover;
-    /* background-position: 0 -90px; */
+    background-position: 0 -90px;
     border-bottom: 5px solid skyblue;
     border-top: 5px solid salmon;
 }
 
-.content{
+.main{
+    width: 600px;
     padding: 20px;
+    box-sizing: border-box;
+    float: left;
+    background-color: Gainsboro; 
 }
 
-.content h2{
+.main h2{
     font-size: 28px;
     font-weight: bold;
 }
 
-.content .penulis{
+.main .penulis{
     font-size: 12px;
     margin-top: -5px;
     text-decoration: none;
 }
 
-.content .penulis a{
+.main .penulis a{
     color: salmon;
     text-decoration: none;
 }
 
-.content p{
+.main p{
     margin-bottom: 20px;
     font-size: 13px;
+}
+
+/* sidebar */
+.sidebar {
+    width: 330px;
+    padding: 10px;
+    background-color: Gainsboro;
+    float: right;
+}
+
+.sidebar h3{
+    font-family: roboto, san-serif, calibri;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.sidebar a{        
+    text-decoration: none;
+    color: blueviolet;
+    display: block;
+    font-size: 14px;
+}
+
+.link li a{
+text-align: left;
+margin-top: 12px;
 }
 
 .footer{
@@ -133,4 +197,19 @@ body{
     font-size: 12px;
     color: white;
     text-align: center;
+}
+
+/* clearfix */
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+.cf {
+    *zoom: 1;
 }
