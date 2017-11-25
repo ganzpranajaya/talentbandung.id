@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jelajah Taman Tematik Bandung</title>
+    <link href="https://fonts.googleapis.com/css?family=Caveat|Playfair+Display|Roboto:300,400,400i" rel="stylesheet"> 
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="site-content" id="app">
+        <header class="hero">
+            <h1>
+                <span class="subtitle">Jelajah</span>
+                <span class="title">Taman Bandung</span>
+            </h1>
+            <p>Ada lebih dari 20+ Taman Tematik untuk tempat Hang-out Anda</p>
+                
+            <form action="#">
+                <input type="search" class="search" placeholder="Cari Berdasarkan Lokasi atau Nama Taman">
+                <button type="submit"><i class= "ion-search"></i></button>
+            </form>
+        </header>
+        
+        <main>
+            <div class="daftar-taman grid-layout">
+                <taman>
+                    v-for="taman in daftarTaman"
+                    v-bind:taman="taman"
+                    v-bind:key="data.id">
+                </taman>
+
+                <div class="grid-item">
+                    <article class="taman">
+                        <figure>
+                            <a href="single.html">
+                                <img src="images/taman-balkot.jpg" alt="">
+                            </a>
+                        </figure>
+                        <div class="taman-detail">
+                            <h2>
+                                <a href="single.html">
+                                    <span class="subtitle">Taman</span>
+                                    <span class="title">Balai Kota</span>
+                                </a>
+                            </h2>
+                            <p>Jl. Wastu Kencana, Bandung Wetan, Bandung, Jawa Barat</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </main>
+        
+        <footer class="footer">
+            <p>&copy; copyright 2017 by talentbandung.id</p>
+        </footer>
+    </div>
+
+    <script src="jquery-3.2.1.js"></script>
+    <script src="vue.js"></script>
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                daftarTaman: []
+            },
+            created: function(){
+                this.getData();
+            },
+            methods: {
+                getData: function(){
+                    var _this = this
+                    $.get('https://ariona.net/talentbandung/', function(data){
+                        _this.daftarTaman = data
+                    });
+                }
+            },
+        })
+    </script>
+</body>
+</html>
